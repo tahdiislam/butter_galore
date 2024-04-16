@@ -42,4 +42,4 @@ def all_items(request):
             },
         ]
     }
-    return render(request, 'all_items.html', context)
+    return render(request, 'meal/all_items.html', context)
