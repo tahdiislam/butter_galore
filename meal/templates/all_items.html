@@ -1,0 +1,21 @@
+<!-- @format -->
+
+{% extends "base.html" %} {% block content %}
+<section class="px-4">
+  <h1 class="py-4">All Available Items</h1>
+  <div class="row">
+    {% for item in categories %}
+    <div class="card col-4">
+      <img src="{{item.strCategoryThumb}}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{item.strCategory}}</h5>
+        <h5 class="card-title">Food Id: {{item.idCategory}}</h5>
+        <p class="card-text">
+          {{item.strCategoryDescription | truncatewords:10}}
+        </p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
